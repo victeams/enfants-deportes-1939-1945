@@ -51,6 +51,7 @@
       .brand span { color: var(--gold); margin-right: .45rem; }
       nav { display: flex; gap: 1rem; }
       nav a { color: var(--muted); font-size: .84rem; text-decoration: none; }
+      nav .site-switch { color: var(--gold); border-bottom: 1px solid var(--gold); }
       .intro { padding: clamp(3rem, 10vw, 7rem) 0 3rem; border-bottom: 1px solid var(--line); }
       .eyebrow { color: var(--gold); font-size: .72rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
       h1, h2, h3 { font-family: Georgia, serif; font-weight: 400; line-height: 1.08; }
@@ -60,6 +61,9 @@
       .actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.6rem; }
       .button { display: inline-flex; min-height: 48px; align-items: center; padding: .7rem 1.1rem; border: 1px solid var(--gold); background: var(--gold); color: #17140f; font-weight: 750; text-decoration: none; }
       .button.secondary { background: transparent; color: var(--gold); }
+      .bridge { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: clamp(1.5rem, 5vw, 4rem); align-items: center; margin: 2rem 0 0; padding: clamp(1.4rem, 3vw, 2rem); border: 1px solid var(--line); border-left: 4px solid var(--gold); background: var(--raised); }
+      .bridge h2 { margin: .35rem 0 .7rem; font-size: clamp(1.65rem, 4vw, 2.5rem); }
+      .bridge p { max-width: 740px; margin: 0; color: var(--muted); }
       .explorer { padding: 4rem 0 6rem; }
       .section-head { display: flex; justify-content: space-between; gap: 1.5rem; align-items: end; margin-bottom: 1.4rem; }
       .controls { display: grid; grid-template-columns: 1fr 220px; gap: .8rem; margin-bottom: 1.5rem; padding: 1rem; background: var(--raised); border: 1px solid var(--line); }
@@ -78,7 +82,7 @@
       .memory { display: grid; grid-template-columns: 1fr .8fr; gap: 3rem; align-items: center; margin-bottom: 5rem; padding: clamp(2rem, 6vw, 4rem); background: var(--wine); }
       .memory p { color: #e4d7d2; }
       footer { display: flex; justify-content: space-between; gap: 2rem; padding: 2rem 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .78rem; }
-      @media (max-width: 850px) { .grid { grid-template-columns: repeat(2, 1fr); } .memory { grid-template-columns: 1fr; } }
+      @media (max-width: 850px) { .grid { grid-template-columns: repeat(2, 1fr); } .bridge, .memory { grid-template-columns: 1fr; } }
       @media (max-width: 620px) {
         nav a:first-child { display: none; }
         .section-head { display: block; }
@@ -95,6 +99,7 @@
         <a href="#portraits">Portraits</a>
         <a href="https://enfants-deportes-1939-1945.fdhrddsveg.chatgpt.site/galerie">Galerie</a>
         <a href="https://enfants-deportes-1939-1945.fdhrddsveg.chatgpt.site/#hommages">Hommages</a>
+        <a class="site-switch" href="https://enfants-deportes-1939-1945.fdhrddsveg.chatgpt.site">Site complet ↗</a>
       </nav>
     </header>
 
@@ -112,6 +117,15 @@
             Ouvrir le mémorial complet
           </a>
         </div>
+      </section>
+
+      <section class="bridge" aria-labelledby="bridge-title">
+        <div>
+          <p class="eyebrow">Passerelle vers le mémorial complet</p>
+          <h2 id="bridge-title">Poursuivre la visite</h2>
+          <p>Vous consultez la version GitHub Pages. Retrouvez les biographies complètes, la galerie, les hommages et le soutien sur le mémorial principal.</p>
+        </div>
+        <a class="button" href="https://enfants-deportes-1939-1945.fdhrddsveg.chatgpt.site">Ouvrir le site complet →</a>
       </section>
 
       <section class="explorer" id="portraits">
@@ -246,7 +260,7 @@
       </section>
     </main>
 
-    <footer><span>Enfants déportés 1939-1945</span><span>Aucune publicité · Aucun profilage</span></footer>
+    <footer><span>Enfants déportés 1939-1945</span><span><a href="https://enfants-deportes-1939-1945.fdhrddsveg.chatgpt.site">Mémorial complet</a> · Aucune publicité · Aucun profilage</span></footer>
     <script>
       const search = document.querySelector("#search");
       const outcome = document.querySelector("#outcome");
