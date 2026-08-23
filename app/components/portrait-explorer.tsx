@@ -8,7 +8,7 @@ type Props = {
   portraits: Portrait[];
 };
 
-const outcomes = ["Tous", "Assassinés", "Survivants"] as const;
+const outcomes = ["Tous", "Victimes", "Survivants"] as const;
 
 export function PortraitExplorer({ portraits }: Props) {
   const [query, setQuery] = useState("");
@@ -33,7 +33,7 @@ export function PortraitExplorer({ portraits }: Props) {
       const matchesOutcome =
         outcome === "Tous" ||
         (outcome === "Survivants" && portrait.outcome.startsWith("Surviv")) ||
-        (outcome === "Assassinés" && !portrait.outcome.startsWith("Surviv"));
+        (outcome === "Victimes" && !portrait.outcome.startsWith("Surviv"));
       return matchesQuery && matchesCountry && matchesOutcome;
     });
   }, [country, outcome, portraits, query]);

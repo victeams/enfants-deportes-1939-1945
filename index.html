@@ -70,7 +70,7 @@
       .image { display: grid; place-items: center; padding: 1rem; background: #1b1a17; }
       .image img { width: 100%; height: 100%; object-fit: contain; }
       .body { display: flex; flex-direction: column; padding: 1.3rem; border-top: 1px solid var(--line); }
-      .meta { display: flex; justify-content: space-between; gap: 1rem; color: var(--muted); font-size: .72rem; text-transform: uppercase; }
+      .meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .45rem 1rem; color: var(--muted); font-size: .72rem; text-transform: uppercase; }
       .body h3 { margin: 1rem 0 .6rem; font-size: 1.6rem; }
       .body p { margin: 0 0 1.2rem; color: var(--muted); font-size: .9rem; }
       .story-link { width: fit-content; margin-top: auto; color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold); }
@@ -120,7 +120,7 @@
             <p class="eyebrow">Archives nominatives</p>
             <h2>Retrouver un visage</h2>
           </div>
-          <p id="count" aria-live="polite">5 portraits</p>
+          <p id="count" aria-live="polite">15 portraits</p>
         </div>
         <div class="controls">
           <label>Rechercher
@@ -129,7 +129,7 @@
           <label>Destin
             <select id="outcome">
               <option value="all">Tous</option>
-              <option value="victim">Assassinés</option>
+              <option value="victim">Victimes</option>
               <option value="survivor">Survivants</option>
             </select>
           </label>
@@ -155,6 +155,46 @@
           <article class="card" data-search="clarence frank westerbork theresienstadt pays-bas" data-outcome="survivor">
             <div class="image"><img src="https://wwv.yadvashem.org/yv/en/exhibitions/women-in-the-holocaust/images/motherhood/katarina/01.jpg" alt="Catharina Frank tenant son bébé Clarence" /></div>
             <div class="body"><div class="meta"><span>Bébé</span><span>Survivant</span></div><h3>Clarence Frank</h3><p>Né à Westerbork, il fut déporté à Theresienstadt avec sa mère.</p><a class="story-link" href="https://enfants-deportes-1939-1945.fdhrddsveg.chatgpt.site/portraits/clarence-frank">Lire son histoire →</a></div>
+          </article>
+          <article class="card" data-search="bettje van delft sappemeer pays-bas westerbork auschwitz-birkenau" data-outcome="victim">
+            <div class="image"><img src="https://www.joodsmonument.nl/image/2016/3/28/00749_b_bettje_van_delft_850_pix.jpg" alt="Bettje van Delft photographiée bébé" loading="lazy" /></div>
+            <div class="body"><div class="meta"><span>10 mois</span><span>Assassinée</span></div><h3>Bettje van Delft</h3><p>Séparée de son père, elle fut déportée avec sa mère à dix mois.</p><a class="story-link" href="https://enfants-deportes-1939-1945.fdhrddsveg.chatgpt.site/portraits/bettje-van-delft">Lire son histoire →</a></div>
+          </article>
+          <article class="card" data-search="carry ellen fogel westerbork theresienstadt auschwitz-birkenau pays-bas" data-outcome="victim">
+            <div class="image"><img src="https://www.joodsmonument.nl/image/2016/3/28/fogel_carry_ellen_27_03_1944.jpg" alt="Carry Ellen Fogel photographiée nouveau-née" loading="lazy" /></div>
+            <div class="body"><div class="meta"><span>6 mois</span><span>Assassinée</span></div><h3>Carry Ellen Fogel</h3><p>Née prisonnière à Westerbork, elle ne connut que les camps et les convois.</p><a class="story-link" href="https://enfants-deportes-1939-1945.fdhrddsveg.chatgpt.site/portraits/carry-ellen-fogel">Lire son histoire →</a></div>
+          </article>
+          <article class="card" data-search="cornelia de boer amsterdam pays-bas westerbork sobibor" data-outcome="victim">
+            <div class="image"><img src="https://www.joodsmonument.nl/image/2025/2/23/cornelia_de_boer.jpg" alt="Cornelia de Boer emmitouflée sur un coussin" loading="lazy" /></div>
+            <div class="body"><div class="meta"><span>11 mois</span><span>Assassinée</span></div><h3>Cornelia de Boer</h3><p>Déportée à Sobibór avec sa mère, son frère Jacques et sa sœur Hetty.</p><a class="story-link" href="https://enfants-deportes-1939-1945.fdhrddsveg.chatgpt.site/portraits/cornelia-de-boer">Lire son histoire →</a></div>
+          </article>
+          <article class="card" data-search="edith poppelsdorf amsterdam pays-bas westerbork auschwitz-birkenau" data-outcome="victim">
+            <div class="image"><img src="https://www.joodsmonument.nl/image/2016/3/28/poppelsdorf_edith_28_12_1941.jpg" alt="Portrait en studio d’Edith Poppelsdorf bébé" loading="lazy" /></div>
+            <div class="body"><div class="meta"><span>7 mois</span><span>Assassinée</span></div><h3>Edith Poppelsdorf</h3><p>À sept mois, Edith fut assassinée à Auschwitz avec sa mère Roosje.</p><a class="story-link" href="https://enfants-deportes-1939-1945.fdhrddsveg.chatgpt.site/portraits/edith-poppelsdorf">Lire son histoire →</a></div>
+          </article>
+          <article class="card" data-search="meijer leman zwolle pays-bas westerbork auschwitz-birkenau" data-outcome="victim">
+            <div class="image"><img src="https://www.joodsmonument.nl/image/2018/1/13/leman_henderika_rika_27_10_1940_en_meijer_01_12_1941_2_jpg_mediaclass_admin_medi.jpg" alt="Meijer Leman bébé dans les bras de sa famille" loading="lazy" /></div>
+            <div class="body"><div class="meta"><span>11 mois</span><span>Assassiné</span></div><h3>Meijer Leman</h3><p>Photographié dans les bras des siens avant la déportation de toute sa famille.</p><a class="story-link" href="https://enfants-deportes-1939-1945.fdhrddsveg.chatgpt.site/portraits/meijer-leman">Lire son histoire →</a></div>
+          </article>
+          <article class="card" data-search="serica bianca gabay alkmaar pays-bas westerbork" data-outcome="victim">
+            <div class="image"><img src="https://www.joodsmonument.nl/image/2016/3/28/serica_gabay_1_001.jpg" alt="Dina Gabay tenant sa fille Serica Bianca" loading="lazy" /></div>
+            <div class="body"><div class="meta"><span>9 mois</span><span>Morte en déportation</span></div><h3>Serica Bianca Gabay</h3><p>Arrêtée avec sa mère après une dénonciation, elle mourut à Westerbork.</p><a class="story-link" href="https://enfants-deportes-1939-1945.fdhrddsveg.chatgpt.site/portraits/serica-bianca-gabay">Lire son histoire →</a></div>
+          </article>
+          <article class="card" data-search="jacob de mesquita amsterdam pays-bas westerbork auschwitz-birkenau" data-outcome="victim">
+            <div class="image"><img src="https://www.joodsmonument.nl/image/2016/3/28/jacob_de_mesquita.jpg" alt="Jacob de Mesquita photographié bébé" loading="lazy" /></div>
+            <div class="body"><div class="meta"><span>9 mois</span><span>Assassiné</span></div><h3>Jacob de Mesquita</h3><p>Assassiné à Auschwitz avec sa mère Femmetje alors qu’il avait neuf mois.</p><a class="story-link" href="https://enfants-deportes-1939-1945.fdhrddsveg.chatgpt.site/portraits/jacob-de-mesquita">Lire son histoire →</a></div>
+          </article>
+          <article class="card" data-search="elise sara esther de vries amsterdam pays-bas westerbork sobibor" data-outcome="victim">
+            <div class="image"><img src="https://www.joodsmonument.nl/image/2024/11/9/1709239328_4253058_8775104984397150942.jpg" alt="Elise Sara Esther de Vries photographiée bébé" loading="lazy" /></div>
+            <div class="body"><div class="meta"><span>11 mois</span><span>Assassinée</span></div><h3>Elise Sara Esther de Vries</h3><p>Assassinée avec ses parents quelques jours avant son premier anniversaire.</p><a class="story-link" href="https://enfants-deportes-1939-1945.fdhrddsveg.chatgpt.site/portraits/elise-sara-esther-de-vries">Lire son histoire →</a></div>
+          </article>
+          <article class="card" data-search="sophia leser amsterdam pays-bas westerbork auschwitz-birkenau" data-outcome="victim">
+            <div class="image"><img src="https://www.joodsmonument.nl/image/2016/3/28/sophia_leser.jpg" alt="Sophia Leser photographiée bébé" loading="lazy" /></div>
+            <div class="body"><div class="meta"><span>1 an</span><span>Assassinée</span></div><h3>Sophia Leser</h3><p>Arrachée au foyer d’enfants qui la protégeait, elle fut déportée à Auschwitz.</p><a class="story-link" href="https://enfants-deportes-1939-1945.fdhrddsveg.chatgpt.site/portraits/sophia-leser">Lire son histoire →</a></div>
+          </article>
+          <article class="card" data-search="levie swart amsterdam pays-bas westerbork auschwitz-birkenau" data-outcome="victim">
+            <div class="image"><img src="https://www.joodsmonument.nl/image/2016/3/28/swart_levie_06_02_1942_en_frouwke_22_10_1939.jpg" alt="Levie Swart bébé auprès de sa sœur Frouwke" loading="lazy" /></div>
+            <div class="body"><div class="meta"><span>6 mois</span><span>Assassiné</span></div><h3>Levie Swart</h3><p>Né après la déportation de son père, Levie fut assassiné avec sa mère et sa sœur.</p><a class="story-link" href="https://enfants-deportes-1939-1945.fdhrddsveg.chatgpt.site/portraits/levie-swart">Lire son histoire →</a></div>
           </article>
         </div>
         <p class="empty" id="empty">Aucun portrait ne correspond à cette recherche.</p>
