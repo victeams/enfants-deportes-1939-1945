@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Galerie photographique",
   description:
     "Photographies d’archives documentées d’enfants déportés entre 1939 et 1945.",
+  alternates: {
+    canonical: "/galerie",
+  },
 };
 
 export default function GalleryPage() {
