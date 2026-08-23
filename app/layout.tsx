@@ -6,7 +6,8 @@ const title = "Enfants déportés 1939-1945";
 const description =
   "Un mémorial numérique consacré aux enfants déportés pendant la Seconde Guerre mondiale, à leurs visages, leurs familles et leurs histoires.";
 const siteUrl = "https://enfants-deportes-1939-1945.fdhrddsveg.chatgpt.site";
-const githubPagesUrl = "https://victeams.github.io/enfants-deportes-1939-1945/";
+const companionSiteUrl =
+  "https://victeams.github.io/Le-panthon-des-heros-aushwist-41-45/";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -81,11 +82,11 @@ export default function RootLayout({
             <Link href="/#soutenir">Soutenir</Link>
             <a
               className="site-switch"
-              href={githubPagesUrl}
+              href={companionSiteUrl}
               target="_blank"
               rel="noreferrer"
             >
-              GitHub Pages <span aria-hidden="true">↗</span>
+              Panthéon des héros <span aria-hidden="true">↗</span>
             </a>
           </nav>
         </header>
@@ -93,7 +94,7 @@ export default function RootLayout({
         <footer className="site-footer">
           <p>Enfants déportés 1939-1945 · Mémoire, documentation, transmission.</p>
           <p>
-            <a href={githubPagesUrl}>Version GitHub Pages</a>
+            <a href={companionSiteUrl}>Le Panthéon des héros</a>
             <span aria-hidden="true"> · </span>
             Aucune publicité. Aucun profilage publicitaire.
           </p>

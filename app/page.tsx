@@ -26,21 +26,21 @@ export default function Home() {
 
       <section className="site-bridge" aria-labelledby="bridge-title">
         <div>
-          <p className="eyebrow">Deux accès, une seule mémoire</p>
-          <h2 id="bridge-title">Passer à la version GitHub Pages</h2>
+          <p className="eyebrow">Deux sites, une même transmission</p>
+          <h2 id="bridge-title">Découvrir le Panthéon des héros</h2>
           <p>
-            Le mémorial complet contient les biographies, la galerie, les
-            hommages et le soutien. Une version publique simplifiée est aussi
-            disponible sur GitHub Pages avec les mêmes 25 portraits.
+            Poursuivez le travail de mémoire avec les portraits documentés de
+            femmes et d’hommes résistants et déportés pendant la Seconde Guerre
+            mondiale.
           </p>
         </div>
         <a
           className="button button--outline"
-          href="https://victeams.github.io/enfants-deportes-1939-1945/"
+          href="https://victeams.github.io/Le-panthon-des-heros-aushwist-41-45/"
           target="_blank"
           rel="noreferrer"
         >
-          Ouvrir GitHub Pages <span aria-hidden="true">↗</span>
+          Ouvrir le Panthéon des héros <span aria-hidden="true">↗</span>
         </a>
       </section>
 
