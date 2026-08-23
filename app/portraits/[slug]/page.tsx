@@ -18,9 +18,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: portrait.name,
     description: portrait.excerpt,
+    alternates: {
+      canonical: "/portraits/" + portrait.slug,
+    },
     openGraph: {
       title: portrait.name,
       description: portrait.excerpt,
+      url: "/portraits/" + portrait.slug,
       images: [{ url: portrait.imageUrl, alt: portrait.imageAlt }],
     },
     twitter: {
