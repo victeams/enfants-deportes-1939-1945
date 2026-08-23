@@ -5,18 +5,36 @@ import "./globals.css";
 const title = "Enfants déportés 1939-1945";
 const description =
   "Un mémorial numérique consacré aux enfants déportés pendant la Seconde Guerre mondiale, à leurs visages, leurs familles et leurs histoires.";
+const siteUrl = "https://enfants-deportes-1939-1945.fdhrddsveg.chatgpt.site";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     default: title,
     template: "%s · " + title,
   },
   description,
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
     title,
     description,
     type: "website",
     locale: "fr_FR",
+    url: siteUrl,
+    siteName: title,
     images: [
       {
         url: "/social-card.jpg",
