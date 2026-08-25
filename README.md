@@ -15,7 +15,7 @@ d’hommages modéré.
 
 ## Fonctionnalités
 
-- deux cent vingt-cinq portraits documentés, dont deux cents fiches individuelles directement accessibles sur GitHub Pages ;
+- trois cent vingt-cinq portraits documentés, dont trois cents fiches individuelles directement accessibles sur GitHub Pages ;
 - recherche et filtres par pays et destin ;
 - galerie photographique avec crédits et liens vers les sources ;
 - formulaire d’hommage persistant sur Cloudflare D1 ;
