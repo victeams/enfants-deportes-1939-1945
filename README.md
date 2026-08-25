@@ -15,7 +15,7 @@ d’hommages modéré.
 
 ## Fonctionnalités
 
-- cinq premiers portraits documentés avec fiches individuelles ;
+- cinquante portraits documentés, dont vingt-cinq fiches individuelles directement accessibles sur GitHub Pages ;
 - recherche et filtres par pays et destin ;
 - galerie photographique avec crédits et liens vers les sources ;
 - formulaire d’hommage persistant sur Cloudflare D1 ;
@@ -36,9 +36,10 @@ Les migrations de la base de données se trouvent dans `drizzle/`.
 
 ## Déploiement
 
-Le code peut être conservé sur GitHub. L’hébergement complet nécessite un
-environnement compatible avec Vinext et une base D1 ; GitHub Pages seul ne peut
-pas exécuter l’API dynamique des hommages.
+La page d’accueil, les portraits statiques, le fichier d’indexation et les
+fiches nouvellement générées sont publiables directement sur GitHub Pages.
+L’hébergement complet nécessite toujours un environnement compatible avec
+Vinext et une base D1 pour exécuter l’API dynamique des hommages.
 
 ## Sources
 
