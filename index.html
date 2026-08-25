@@ -58,6 +58,30 @@
       h1 { max-width: 950px; margin: .7rem 0 1.2rem; font-size: clamp(3rem, 10vw, 7rem); letter-spacing: -.04em; }
       h2 { margin: 0; font-size: clamp(2rem, 5vw, 3.6rem); }
       .lead { max-width: 760px; color: #d1cbc0; font-family: Georgia, serif; font-size: clamp(1.08rem, 2.5vw, 1.4rem); }
+      .portrait-total {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        gap: clamp(1rem, 3vw, 1.8rem);
+        align-items: center;
+        width: fit-content;
+        max-width: 100%;
+        margin-top: 1.7rem;
+        padding: clamp(1rem, 3vw, 1.45rem) clamp(1.1rem, 4vw, 1.8rem);
+        border: 1px solid var(--gold);
+        border-left: 5px solid var(--gold);
+        background: linear-gradient(120deg, rgba(215, 189, 141, .13), rgba(91, 36, 40, .22));
+        box-shadow: 0 18px 50px rgba(0, 0, 0, .22);
+      }
+      .portrait-total__number {
+        color: var(--gold);
+        font-family: Georgia, serif;
+        font-size: clamp(3.4rem, 10vw, 6.3rem);
+        line-height: .82;
+        letter-spacing: -.06em;
+      }
+      .portrait-total__copy { display: grid; gap: .2rem; }
+      .portrait-total__label { font-size: clamp(.9rem, 2vw, 1.08rem); font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+      .portrait-total__note { color: var(--muted); font-size: .82rem; }
       .actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.6rem; }
       .button { display: inline-flex; min-height: 48px; align-items: center; padding: .7rem 1.1rem; border: 1px solid var(--gold); background: var(--gold); color: #17140f; font-weight: 750; text-decoration: none; }
       .button.secondary { background: transparent; color: var(--gold); }
@@ -85,6 +109,7 @@
       @media (max-width: 850px) { .grid { grid-template-columns: repeat(2, 1fr); } .bridge, .memory { grid-template-columns: 1fr; } }
       @media (max-width: 620px) {
         nav a:first-child { display: none; }
+        .portrait-total { grid-template-columns: 1fr; width: 100%; }
         .section-head { display: block; }
         .controls, .grid { grid-template-columns: 1fr; }
         .card { grid-template-rows: 320px 1fr; }
@@ -111,6 +136,13 @@
           Derrière chaque date se trouvait une enfance, une famille et un avenir.
           Retrouvons leurs visages et transmettons leurs histoires.
         </p>
+        <div class="portrait-total" aria-label="Nombre total de portraits documentés sur le site">
+          <strong class="portrait-total__number" id="hero-count">325</strong>
+          <span class="portrait-total__copy">
+            <span class="portrait-total__label">portraits documentés en ligne</span>
+            <span class="portrait-total__note">Ce compteur se met à jour automatiquement à chaque nouvel ajout.</span>
+          </span>
+        </div>
         <div class="actions">
           <a class="button" href="#portraits">Découvrir les portraits</a>
           <a class="button secondary" href="https://enfants-deportes-1939-1945.fdhrddsveg.chatgpt.site">
@@ -1468,7 +1500,11 @@
       const outcome = document.querySelector("#outcome");
       const cards = [...document.querySelectorAll(".card")];
       const count = document.querySelector("#count");
+      const heroCount = document.querySelector("#hero-count");
       const empty = document.querySelector("#empty");
+      const total = cards.length;
+      heroCount.textContent = total.toLocaleString("fr-FR");
+      count.textContent = total + (total > 1 ? " portraits" : " portrait");
       function filterCards() {
         const query = search.value.trim().toLocaleLowerCase("fr");
         let visible = 0;

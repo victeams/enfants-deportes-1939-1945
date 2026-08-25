@@ -118,6 +118,12 @@ def main() -> None:
         index,
         count=1,
     )
+    index = re.sub(
+        r'(<strong class="portrait-total__number" id="hero-count">)\d+(</strong>)',
+        rf"\g<1>{total}\g<2>",
+        index,
+        count=1,
+    )
     INDEX_PATH.write_text(index, encoding="utf-8")
 
     for person in people:
