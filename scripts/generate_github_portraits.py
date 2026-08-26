@@ -22,6 +22,31 @@ def esc(value: str) -> str:
     return html.escape(value, quote=True)
 
 
+def add_victim_badges(index: str) -> str:
+    """Place le destin en rouge sur la photo de chaque victime, sans doublon."""
+
+    victim_card = re.compile(
+        r'<article class="card"[^>]*data-outcome="victim"[^>]*>[\s\S]*?</article>'
+    )
+
+    def add_badge(match: re.Match[str]) -> str:
+        card_html = match.group(0)
+        if 'class="victim-badge"' in card_html:
+            return card_html
+        outcome = re.search(
+            r'<div class="meta"><span>[^<]*</span><span>([^<]+)</span></div>',
+            card_html,
+        )
+        label = outcome.group(1) if outcome else "Assassiné·e"
+        return card_html.replace(
+            '<div class="image">',
+            f'<div class="image"><span class="victim-badge">{label}</span>',
+            1,
+        )
+
+    return victim_card.sub(add_badge, index)
+
+
 def card(person: dict[str, object]) -> str:
     return f'''          <article class="card" data-search="{esc(str(person["search"]))}" data-outcome="victim">
             <div class="image"><img src="{esc(str(person["image"]))}" alt="{esc(str(person["imageAlt"]))}" loading="lazy" /></div>
@@ -111,6 +136,7 @@ def main() -> None:
         index,
         count=1,
     )
+    index = add_victim_badges(index)
     total = len(re.findall(r'<article class="card"', index))
     index = re.sub(
         r'(<p id="count" aria-live="polite">)\d+ portraits(</p>)',

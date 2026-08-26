@@ -92,6 +92,9 @@ export function PortraitExplorer({ portraits }: Props) {
             <article className="portrait-card" key={portrait.slug}>
               <Link href={"/portraits/" + portrait.slug} className="portrait-card__image">
                 {/* Archives are displayed in full, without cropping or alteration. */}
+                {!portrait.outcome.startsWith("Surviv") ? (
+                  <span className="portrait-card__status">{portrait.outcome}</span>
+                ) : null}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={portrait.imageUrl} alt={portrait.imageAlt} loading="lazy" />
               </Link>
