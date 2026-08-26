@@ -11,6 +11,9 @@ const companionSiteUrl =
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  verification: {
+    google: "Ps2YA3umzm7WkI3vXbghKUg9ybi9iYKRJ7PONsI-8vU",
+  },
   title: {
     default: title,
     template: "%s · " + title,
