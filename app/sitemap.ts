@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { portraits } from "../data/portraits";
 
-const siteUrl = "https://enfants-deportes-1939-1945.fdhrddsveg.chatgpt.site";
+const siteUrl = "https://victeams.github.io/enfants-deportes-1939-1945";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
