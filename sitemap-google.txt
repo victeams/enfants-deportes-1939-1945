@@ -11,6 +11,7 @@ https://victeams.github.io/enfants-deportes-1939-1945/portraits/alex-weijel.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/alexander-joseph-loeza.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/alexander-van-der-stam.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/alexander-velleman.html
+https://victeams.github.io/enfants-deportes-1939-1945/portraits/alfred-herbert-auerbacher.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/alfred-keizer.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/alice-abas.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/alice-van-thijn.html
@@ -27,12 +28,14 @@ https://victeams.github.io/enfants-deportes-1939-1945/portraits/antoinette-eliza
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/arnold-salomon-de-groot.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/arnold-van-emden.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/aron-polak.html
+https://victeams.github.io/enfants-deportes-1939-1945/portraits/barbara-aal.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/barend-elburg.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/barnett-greenman.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/beatrix-romijn.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/belia-de-leeuw.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/benjamin-izak-berkovics.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/benjamin-vischschoonmaker.html
+https://victeams.github.io/enfants-deportes-1939-1945/portraits/beppy-abrahamson.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/bernard-gosschalk.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/bernard-leo-laden.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/bernard-lierens.html
@@ -79,6 +82,7 @@ https://victeams.github.io/enfants-deportes-1939-1945/portraits/elisabeth-margar
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/elise-sara-esther-de-vries.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/ellen-wilhelmina-ullmann.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/elsbeth-zilversmit.html
+https://victeams.github.io/enfants-deportes-1939-1945/portraits/elvire-baum.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/emil-turfrijer.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/emma-greta-rosalina-zilverberg.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/emma-heinemann.html
@@ -204,9 +208,12 @@ https://victeams.github.io/enfants-deportes-1939-1945/portraits/lea-judith-de-la
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/lea-lakmaker.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/lea-stein.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/leendert-engelsman.html
+https://victeams.github.io/enfants-deportes-1939-1945/portraits/leendert-flip-van-amerongen.html
+https://victeams.github.io/enfants-deportes-1939-1945/portraits/lenny-aa.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/leny-engelsman.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/leo-polak.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/leon-jacob.html
+https://victeams.github.io/enfants-deportes-1939-1945/portraits/leonora-agsteribbe.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/levie-mug.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/levie-swart.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/lida-carla-ten-brink.html
@@ -227,6 +234,7 @@ https://victeams.github.io/enfants-deportes-1939-1945/portraits/marcel-marcus-bl
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/margaretha-bertha-aussen.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/margaretha-rebecca-van-moppes.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/marianna-de-la-fuente.html
+https://victeams.github.io/enfants-deportes-1939-1945/portraits/marianne-aandagt.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/marie-majerowicz.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/marieka-bobbe.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/marijke-godschalk.html
@@ -250,6 +258,7 @@ https://victeams.github.io/enfants-deportes-1939-1945/portraits/mia-bloeme-water
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/michael-van-der-heijden.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/michel-andre.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/mietje-blok.html
+https://victeams.github.io/enfants-deportes-1939-1945/portraits/mirjam-alter.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/mirjam-blok.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/mirjam-couzijn.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/mirjam-de-leeuw.html
@@ -289,6 +298,7 @@ https://victeams.github.io/enfants-deportes-1939-1945/portraits/roseline-poppels
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/rosemarie-henny-kargauer.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/ruben-sztycer.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/rudi-rosa-wolf.html
+https://victeams.github.io/enfants-deportes-1939-1945/portraits/rudolf-de-beer.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/salli-cohen.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/salomon-behr.html
 https://victeams.github.io/enfants-deportes-1939-1945/portraits/salomon-de-bruin.html

@@ -157,13 +157,17 @@ def main() -> None:
             portrait_page(person), encoding="utf-8"
         )
 
+    portrait_files = sorted(path.name for path in PORTRAITS_DIR.glob("*.html"))
     sitemap_urls = [BASE_URL] + [
-        f'{BASE_URL}portraits/{person["slug"]}.html' for person in people
+        f"{BASE_URL}portraits/{filename}" for filename in portrait_files
     ]
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     sitemap += "\n".join(f"  <url><loc>{esc(url)}</loc></url>" for url in sitemap_urls)
     sitemap += "\n</urlset>\n"
     (ROOT / "sitemap.xml").write_text(sitemap, encoding="utf-8")
+    (ROOT / "sitemap-google.txt").write_text(
+        "\n".join(sitemap_urls) + "\n", encoding="utf-8"
+    )
     (ROOT / "robots.txt").write_text(
         f"User-agent: *\nAllow: /\n\nSitemap: {BASE_URL}sitemap.xml\n",
         encoding="utf-8",
