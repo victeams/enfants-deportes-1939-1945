@@ -19,6 +19,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    {
+      url: siteUrl + "/familles",
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
     ...portraits.map((portrait) => ({
       url: siteUrl + "/portraits/" + portrait.slug,
       lastModified,

@@ -1,6 +1,7 @@
 import { PortraitExplorer } from "./components/portrait-explorer";
 import { TributeSection } from "./components/tribute-section";
 import { portraits } from "../data/portraits";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -42,6 +43,15 @@ export default function Home() {
         >
           Ouvrir le Panthéon des héros <span aria-hidden="true">↗</span>
         </a>
+      </section>
+
+      <section className="family-callout" aria-labelledby="family-callout-title">
+        <div>
+          <p className="eyebrow">Nouvelle rubrique · Lyon et sa région</p>
+          <h2 id="family-callout-title">Une famille n’est pas une liste de noms</h2>
+          <p>Découvrez les parents et les enfants qui partageaient une maison, une école et des projets avant d’être déportés ensemble vers Auschwitz-Birkenau.</p>
+        </div>
+        <Link className="button" href="/familles">Découvrir les familles</Link>
       </section>
 
       <PortraitExplorer portraits={portraits} />

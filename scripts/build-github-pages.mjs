@@ -2,9 +2,11 @@ import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { portraits } from "../data/portraits.ts";
+import { families } from "../data/families.ts";
 
 const projectRoot = dirname(dirname(fileURLToPath(import.meta.url)));
 const portraitsDirectory = join(projectRoot, "portraits");
+const familiesDirectory = join(projectRoot, "familles");
 const githubBase = "https://victeams.github.io/enfants-deportes-1939-1945";
 const formerSiteBase = "https://enfants-deportes-1939-1945.fdhrddsveg.chatgpt.site";
 
@@ -98,7 +100,33 @@ function portraitPage(portrait) {
 </html>\n`;
 }
 
+function familiesPage() {
+  const canonical = `${githubBase}/familles/`;
+  const cards = families.map((family) => `
+      <article class="family" id="${escapeHtml(family.slug)}">
+        <div class="family__hero">
+          <figure><img src="${escapeHtml(family.imageUrl)}" alt="${escapeHtml(family.imageAlt)}" loading="lazy" /><figcaption>${escapeHtml(family.imageCredit)}</figcaption></figure>
+          <div><p class="eyebrow">${escapeHtml(family.city)} · Famille documentée</p><h2>${escapeHtml(family.name)}</h2><p class="lead">${escapeHtml(family.excerpt)}</p>
+          <dl><div><dt>Adresse</dt><dd>${escapeHtml(family.address)}</dd></div><div><dt>Déportation</dt><dd>${escapeHtml(family.deportation)}</dd></div><div><dt>Destination</dt><dd>${escapeHtml(family.camp)}</dd></div></dl></div>
+        </div>
+        <section class="members">${family.members.map((member) => `<div class="member"><span>${escapeHtml(member.role)}</span><h3>${escapeHtml(member.name)}</h3><p>${escapeHtml(member.birth)}</p><strong>${escapeHtml(member.age)}</strong><p class="fate">${escapeHtml(member.fate)}</p></div>`).join("")}</section>
+        <section class="story">${family.story.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}${family.archivalNote ? `<aside><strong>Précision des archives</strong>${escapeHtml(family.archivalNote)}</aside>` : ""}<p class="source">${escapeHtml(family.imageCredit)}. <a href="${escapeHtml(family.sourceUrl)}" target="_blank" rel="noreferrer">Consulter les documents d’archives ↗</a></p></section>
+      </article>`).join("\n");
+
+  return `<!doctype html>
+<html lang="fr"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Familles juives déportées · Enfants déportés 1939-1945</title><meta name="description" content="Portraits documentés de familles juives de Lyon déportées à Auschwitz-Birkenau." /><meta name="robots" content="index, follow, max-image-preview:large" /><link rel="canonical" href="${canonical}" />
+  <style>
+    :root{color-scheme:dark;--paper:#11110f;--raised:#191815;--ink:#eeeae1;--muted:#b7b0a4;--line:#37332d;--gold:#d7bd8d;--wine:#5b2428}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65}a{color:inherit}header.site,main,footer{width:min(1120px,calc(100% - 1.4rem));margin-inline:auto}header.site{display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:64px;border-bottom:1px solid var(--line)}header.site a{color:var(--gold);text-decoration:none}.intro{display:grid;grid-template-columns:1fr .75fr;gap:clamp(2rem,8vw,8rem);align-items:end;padding:clamp(3rem,8vw,6rem) 0;border-bottom:1px solid var(--line)}.eyebrow,.member>span{color:var(--gold);font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}h1,h2,h3{font-family:Georgia,serif;font-weight:400;line-height:1.08}h1{margin:.6rem 0;font-size:clamp(3rem,8vw,6.5rem)}h2{margin:.5rem 0 1rem;font-size:clamp(2.8rem,6vw,5.4rem)}.intro p,.lead{color:#d1cbc0;font-family:Georgia,serif;font-size:1.08rem}.index{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;margin:2rem 0 6rem;border:1px solid var(--line);background:var(--line)}.index a{display:grid;gap:.2rem;padding:1.2rem;background:var(--raised);color:var(--gold);text-decoration:none}.index span{color:var(--muted);font-size:.7rem;text-transform:uppercase}.families{display:grid;gap:8rem}.family{scroll-margin-top:1rem}.family__hero{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,7vw,7rem);align-items:start}figure{margin:0}figure img{display:block;width:100%;max-height:680px;object-fit:contain;background:#1b1a17}figcaption{margin-top:.7rem;color:var(--muted);font-size:.75rem}dl{display:grid;margin-top:2rem;border-top:1px solid var(--line)}dl div{display:grid;grid-template-columns:110px 1fr;gap:1rem;padding:.8rem 0;border-bottom:1px solid var(--line)}dt{color:var(--muted);font-size:.7rem;text-transform:uppercase}dd{margin:0}.members{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin:3rem 0;border:1px solid var(--line);background:var(--line)}.member{padding:1.2rem;background:var(--raised)}.member h3{margin:.5rem 0 1rem;font-size:1.3rem}.member p,.member strong{display:block;margin:.25rem 0;color:var(--muted);font-size:.8rem}.member strong{color:var(--ink)}.member .fate{margin-top:1rem;color:#d39b9f}.story{width:min(780px,100%);margin-inline:auto;color:#d6d0c5;font-family:Georgia,serif;font-size:1.12rem;line-height:1.85}.story aside{margin:2rem 0;padding:1rem 1.2rem;border-left:3px solid var(--gold);background:var(--raised);color:var(--muted);font-family:Inter,sans-serif;font-size:.8rem}.story aside strong{display:block;margin-bottom:.35rem;color:var(--gold);text-transform:uppercase}.source{margin-top:2rem;padding-top:1rem;border-top:1px solid var(--line);color:var(--muted);font-family:Inter,sans-serif;font-size:.8rem}.source a{color:var(--gold)}footer{margin-top:7rem;padding:2rem 0;border-top:1px solid var(--line);color:var(--muted);font-size:.78rem}@media(max-width:850px){.intro,.family__hero{grid-template-columns:1fr}.members{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.index,.members{grid-template-columns:1fr}dl div{grid-template-columns:1fr;gap:.2rem}}
+  </style></head><body>
+  <header class="site"><a href="../">✦ Enfants déportés</a><a href="../#portraits">Portraits d’enfants</a></header>
+  <main><section class="intro"><div><p class="eyebrow">Lyon et sa région · Mémoire familiale</p><h1>Des familles entières déportées</h1></div><p>Derrière chaque nom se trouvait un foyer : des parents, des enfants, une adresse, un métier, une école et des projets. Les faits incertains sont signalés clairement.</p></section>
+  <nav class="index" aria-label="Familles présentées">${families.map((family) => `<a href="#${escapeHtml(family.slug)}"><span>${escapeHtml(family.city)}</span><strong>${escapeHtml(family.name)}</strong></a>`).join("")}</nav>
+  <div class="families">${cards}</div></main><footer>Enfants déportés 1939-1945 · Mémoire, documentation, transmission.</footer></body></html>\n`;
+}
+
 await mkdir(portraitsDirectory, { recursive: true });
+await mkdir(familiesDirectory, { recursive: true });
 
 for (const portrait of portraits) {
   await writeFile(
@@ -107,6 +135,8 @@ for (const portrait of portraits) {
     "utf8",
   );
 }
+
+await writeFile(join(familiesDirectory, "index.html"), familiesPage(), "utf8");
 
 const indexPath = join(projectRoot, "index.html");
 let indexHtml = await readFile(indexPath, "utf8");
@@ -128,6 +158,7 @@ const portraitFiles = (await readdir(portraitsDirectory))
   .sort((a, b) => a.localeCompare(b, "fr"));
 const urls = [
   `${githubBase}/`,
+  `${githubBase}/familles/`,
   ...portraitFiles.map((name) => `${githubBase}/portraits/${name}`),
 ];
 
@@ -138,4 +169,4 @@ const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http:
 await writeFile(join(projectRoot, "sitemap.xml"), sitemapXml, "utf8");
 await writeFile(join(projectRoot, "sitemap-google.txt"), `${urls.join("\n")}\n`, "utf8");
 
-console.log(`GitHub Pages prêt : ${portraits.length} portraits de bébés, ${urls.length} URL dans les sitemaps.`);
+console.log(`GitHub Pages prêt : ${portraits.length} portraits, ${families.length} familles, ${urls.length} URL dans les sitemaps.`);

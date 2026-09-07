@@ -79,6 +79,7 @@ export default function RootLayout({
           </Link>
           <nav aria-label="Navigation principale">
             <Link href="/#portraits">Portraits</Link>
+            <Link href="/familles">Familles</Link>
             <Link href="/galerie">Galerie</Link>
             <Link href="/#comprendre">Comprendre</Link>
             <Link href="/#hommages">Hommages</Link>
