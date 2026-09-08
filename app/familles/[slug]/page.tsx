@@ -50,7 +50,7 @@ export default async function FamilyPage({ params }: { params: Promise<{ slug: s
         <section className="family-story__text">
           {family.story.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           {family.archivalNote ? <aside><strong>Précision des archives</strong>{family.archivalNote}</aside> : null}
-          <p className="family-source">{family.imageCredit}. <a href={family.sourceUrl} target="_blank" rel="noreferrer">Consulter le dossier du CDDEJ de Lyon ↗</a></p>
+          <p className="family-source">{family.imageCredit}. <a href={family.sourceUrl} target="_blank" rel="noreferrer">Consulter la source documentaire ↗</a></p>
         </section>
       </article>
     </main>

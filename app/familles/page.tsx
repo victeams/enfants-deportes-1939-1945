@@ -4,7 +4,7 @@ import { families } from "../../data/families";
 
 export const metadata: Metadata = {
   title: "Portraits de familles juives déportées",
-  description: "Photographies et histoires documentées de familles juives de Lyon et sa région déportées à Auschwitz-Birkenau.",
+  description: "Photographies authentiques et histoires documentées de familles juives ayant vécu en France et déportées à Auschwitz-Birkenau.",
   alternates: { canonical: "/familles" },
 };
 
@@ -12,7 +12,7 @@ export default function FamiliesPage() {
   return (
     <main className="families-page">
       <header className="families-hero">
-        <div><p className="eyebrow">Lyon et sa région · Photographies familiales</p><h1>Des familles réunies sur une même image</h1></div>
+        <div><p className="eyebrow">France · Photographies familiales authentiques</p><h1>Des familles réunies sur une même image</h1></div>
         <div className="families-hero__copy">
           <p>Chaque carte montre le foyer photographié ensemble avant sa déportation. Ouvrez un portrait pour découvrir les noms, l’adresse, le convoi et ce que les archives permettent d’établir sur la mort de chacun.</p>
           <p className="families-hero__warning">Aucune image de substitution : les photographies montrant seulement les enfants ou un document d’archive ont été retirées.</p>
@@ -37,7 +37,7 @@ export default function FamiliesPage() {
         ))}
       </section>
 
-      <p className="families-rights">Photographies : Mémorial de la Shoah, diffusées par le CDDEJ de Lyon. Les mentions de droits portées sur les images sont conservées.</p>
+      <p className="families-rights">Les photographies sont présentées dans leur cadrage d’origine. Le crédit et la source documentaire sont indiqués sur chaque portrait.</p>
       <div className="families-back"><Link className="button button--outline" href="/#portraits">Revenir aux portraits d’enfants</Link></div>
     </main>
   );
